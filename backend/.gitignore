@@ -1,26 +1,10 @@
-# Python
 __pycache__/
 *.pyc
 *.pyo
+*.pyd
 venv/
-env/
-*.env
 .env
-
-# Django
-db.sqlite3
+serviceAccountKey.json
 media/
 staticfiles/
-
-# Firebase
-serviceAccountKey.json
-*.json
-
-# Node
-node_modules/
-dist/
-
-# OS
-.DS_Store
-Thumbs.db
-"@
+db.sqlite3
