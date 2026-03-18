@@ -2,8 +2,10 @@
 __pycache__/
 *.pyc
 *.pyo
+*.pyd
 venv/
 .env
+*.env
 serviceAccountKey.json
 *.sqlite3
 media/
