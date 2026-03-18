@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-# backend/config/settings.py
->>>>>>> backend/setup
 from pathlib import Path
 from decouple import config
 
@@ -11,10 +7,6 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1').split(',')
 
-<<<<<<< HEAD
-=======
-# ── Applications ───────────────────────────────────────────────────
->>>>>>> backend/setup
 DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -42,10 +34,6 @@ LOCAL_APPS = [
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
-<<<<<<< HEAD
-=======
-# ── Middleware ─────────────────────────────────────────────────────
->>>>>>> backend/setup
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
@@ -78,10 +66,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-<<<<<<< HEAD
-=======
-# ── Database ───────────────────────────────────────────────────────
->>>>>>> backend/setup
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -93,10 +77,6 @@ DATABASES = {
     }
 }
 
-<<<<<<< HEAD
-=======
-# ── Auth ───────────────────────────────────────────────────────────
->>>>>>> backend/setup
 AUTH_USER_MODEL = 'accounts.User'
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -106,10 +86,6 @@ AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
 ]
 
-<<<<<<< HEAD
-=======
-# ── REST Framework ─────────────────────────────────────────────────
->>>>>>> backend/setup
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'utils.firebase_auth.FirebaseAuthentication',
@@ -121,26 +97,17 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 20,
 }
 
-<<<<<<< HEAD
-=======
-# ── CORS ───────────────────────────────────────────────────────────
->>>>>>> backend/setup
 CORS_ALLOWED_ORIGINS = config(
     'CORS_ALLOWED_ORIGINS',
     default='http://localhost:5173,http://127.0.0.1:5173'
 ).split(',')
 CORS_ALLOW_CREDENTIALS = True
 
-<<<<<<< HEAD
-=======
-# ── Firebase ───────────────────────────────────────────────────────
->>>>>>> backend/setup
 import firebase_admin
 from firebase_admin import credentials
 
 FIREBASE_CREDENTIALS_PATH = config('FIREBASE_CREDENTIALS_PATH')
 
-<<<<<<< HEAD
 try:
     if not firebase_admin._apps:
         cred = credentials.Certificate(FIREBASE_CREDENTIALS_PATH)
@@ -162,39 +129,11 @@ PAYPAL_CLIENT_ID      = config('PAYPAL_CLIENT_ID', default='')
 PAYPAL_CLIENT_SECRET  = config('PAYPAL_CLIENT_SECRET', default='')
 PAYPAL_MODE           = config('PAYPAL_MODE', default='sandbox')
 
-=======
-if not firebase_admin._apps:
-    cred = credentials.Certificate(FIREBASE_CREDENTIALS_PATH)
-    firebase_admin.initialize_app(cred)
-
-# ── Mpesa ──────────────────────────────────────────────────────────
-MPESA_CONSUMER_KEY      = config('MPESA_CONSUMER_KEY')
-MPESA_CONSUMER_SECRET   = config('MPESA_CONSUMER_SECRET')
-MPESA_SHORTCODE         = config('MPESA_SHORTCODE')
-MPESA_PASSKEY           = config('MPESA_PASSKEY')
-MPESA_CALLBACK_URL      = config('MPESA_CALLBACK_URL')
-MPESA_ENV               = config('MPESA_ENV', default='sandbox')
-
-# ── Stripe ─────────────────────────────────────────────────────────
-STRIPE_SECRET_KEY       = config('STRIPE_SECRET_KEY')
-STRIPE_WEBHOOK_SECRET   = config('STRIPE_WEBHOOK_SECRET')
-
-# ── PayPal ─────────────────────────────────────────────────────────
-PAYPAL_CLIENT_ID        = config('PAYPAL_CLIENT_ID')
-PAYPAL_CLIENT_SECRET    = config('PAYPAL_CLIENT_SECRET')
-PAYPAL_MODE             = config('PAYPAL_MODE', default='sandbox')
-
-# ── Internationalization ───────────────────────────────────────────
->>>>>>> backend/setup
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'Africa/Nairobi'
 USE_I18N = True
 USE_TZ = True
 
-<<<<<<< HEAD
-=======
-# ── Static & Media ─────────────────────────────────────────────────
->>>>>>> backend/setup
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
@@ -204,9 +143,4 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-<<<<<<< HEAD
 FRONTEND_URL = config('FRONTEND_URL', default='http://localhost:5173')
-=======
-# ── Frontend URL ───────────────────────────────────────────────────
-FRONTEND_URL = config('FRONTEND_URL', default='http://localhost:5173')
->>>>>>> backend/setup
