@@ -1,0 +1,17 @@
+django>=4.2
+djangorestframework>=3.14
+django-cors-headers>=4.0
+python-decouple>=3.8
+firebase-admin>=6.2
+psycopg2-binary>=2.9
+Pillow>=10.0
+stripe>=7.0
+paypalrestsdk>=1.13
+requests>=2.31
+python-barcode>=0.15
+reportlab>=4.0
+qrcode>=7.4
+celery>=5.3
+redis>=5.0
+gunicorn>=21.0
+whitenoise>=6.5
